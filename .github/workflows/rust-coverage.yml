@@ -1,0 +1,30 @@
+name: coverage
+
+
+on: [push, pull_request]
+
+jobs:
+  coverage:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest]
+
+    name: Test `cargo-llvm-cov` on ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+
+    env:
+      CARGO_TERM_COLOR: always
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: Swatinem/rust-cache@v2
+      - run: rustup toolchain install nightly --profile minimal --component llvm-tools-preview --no-self-update
+
+      - uses: taiki-e/install-action@cargo-llvm-cov
+
+      - uses: ./
+     
+
+      - run: cargo llvm-cov --all-features --workspace
+

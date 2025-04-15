@@ -1,0 +1,30 @@
+name: workspaces
+
+on: [push, pull_request]
+
+jobs:
+  workspaces:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest]
+
+    name: Test multiple workspaces on ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+
+    env:
+      CARGO_TERM_COLOR: always
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: cache tools
+        run: rustup toolchain install nightly --profile minimal --no-self-update
+        uses: Swatinem/rust-cache@v2
+        id: cache-tools
+
+      - name: cargo setup
+        if: steps.cache-tools.outputs.cache-hit != 'true'
+        run: cargo run --package tools --bin init -- setup
+      - run: cargo make build
+      - run: cargo make test

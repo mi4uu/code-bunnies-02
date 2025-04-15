@@ -1,0 +1,15 @@
+This is a rust project  using workspace as central point. 
+
+All dependencies definition is inside workspace Cargo.toml.
+
+Crates  are inside crates directory except tools crate that is a crate with developement delpers.
+
+Crates inside workspace uses dependencies for workspace defining it only with DEPENDENCY_NAME.workspace=true
+
+important paths are defined in .cargo/config.toml
+
+project uses cargo-make to make running commands inside workspace more convinient.
+
+always save whole documentation for any crate workspace is using into markdown format to workspace folder docs/crates/crate_name
+
+keep important facts and observations about crates and usage that might be used in the future in workspace folder docs/notes using name that show what those notes are about and markdown format

@@ -1,0 +1,131 @@
+default_provider = "LmStudio"
+
+[[providers]]
+name = "LmStudio"
+base_url = "http://127.0.0.1:1234/v1"
+api_key = "xxx"
+provider_type = "Ollama"
+api_type = "OpenAI"
+
+[[providers.models]]
+name = "damienclere/granite-3.2-2b-instruct-4bit"
+model = "damienclere/granite-3.2-2b-instruct-4bit"
+
+[[providers.models]]
+name = "bartowski/Tesslate_Gradience-T1-3B-preview-GGUF"
+model = "bartowski/Tesslate_Gradience-T1-3B-preview-GGUF"
+
+[[providers.models]]
+name = "codestral-22b-v0.1"
+model = "codestral-22b-v0.1"
+
+[[providers.models]]
+name = "t3q-qwen2.5-14b-v1.0-e3"
+model = "t3q-qwen2.5-14b-v1.0-e3"
+
+[[providers.models]]
+name = "gonzo404/MN-GRAND-Gutenberg-Lyra4-Lyra-12B-DARKNESS-mlx-4Bit"
+model = "gonzo404/MN-GRAND-Gutenberg-Lyra4-Lyra-12B-DARKNESS-mlx-4Bit"
+
+[[providers.models]]
+name = "mlx-community/mistral-small-3.1-24b-instruct-2503"
+model = "mlx-community/mistral-small-3.1-24b-instruct-2503"
+
+[[providers.models]]
+name = "arcee-agent"
+model = "arcee-agent"
+
+[[providers.models]]
+name = "nxcode-cq-7b-orpo"
+model = "nxcode-cq-7b-orpo"
+
+[[providers.models]]
+name = "kieron-buyskes/Josiefied-Qwen2.5-Coder-14B-Instruct-abliterated-v1-mlx-4Bit"
+model = "kieron-buyskes/Josiefied-Qwen2.5-Coder-14B-Instruct-abliterated-v1-mlx-4Bit"
+
+[[providers.models]]
+name = "phi-4"
+model = "phi-4"
+
+[[providers.models]]
+name = "qwen2.5-coder-14b-houdini_vex_functions"
+model = "qwen2.5-coder-14b-houdini_vex_functions"
+
+[[providers.models]]
+name = "alexgusevski/Selene-1-Mini-Llama-3.1-8B-q3-mlx"
+model = "alexgusevski/Selene-1-Mini-Llama-3.1-8B-q3-mlx"
+
+[[providers.models]]
+name = "qwen2.5-7b-instruct-1m"
+model = "qwen2.5-7b-instruct-1m"
+
+[[providers.models]]
+name = "qwq-coder-instruct-mlx"
+model = "qwq-coder-instruct-mlx"
+
+[[providers.models]]
+name = "fuseo1-deepseekr1-qwen2.5-coder-14b-preview-mixed_3_6"
+model = "fuseo1-deepseekr1-qwen2.5-coder-14b-preview-mixed_3_6"
+
+[[providers.models]]
+name = "alexgusevski/Selene-1-Mini-Llama-3.1-8B-q3-mlx"
+model = "alexgusevski/Selene-1-Mini-Llama-3.1-8B-q3-mlx"
+
+[[providers.models]]
+name = "reasoning-ties-coder-v1.1"
+model = "reasoning-ties-coder-v1.1"
+
+[[providers.models]]
+name = "lmstudio-community/internlm3-8b-instruct"
+model = "lmstudio-community/internlm3-8b-instruct"
+
+[[providers.models]]
+name = "auto-rag-llama-3-8b-instruct-i1"
+model = "auto-rag-llama-3-8b-instruct-i1"
+
+[[providers.models]]
+name = "calme-3.2-llamaloi-3b"
+model = "calme-3.2-llamaloi-3b"
+
+[[providers.models]]
+name = "aya-expanse-8b"
+model = "aya-expanse-8b"
+
+[[providers.models]]
+name = "fluentlylm-prinum"
+model = "fluentlylm-prinum"
+
+[[providers.models]]
+name = "awqward2.5-32b-instruct"
+model = "awqward2.5-32b-instruct"
+
+[[providers.models]]
+name = "mradermacher/Calme-4x7B-MoE-v0.2-i1-GGUF"
+model = "mradermacher/Calme-4x7B-MoE-v0.2-i1-GGUF"
+
+[providers.default_model]
+name = "granite3.2"
+model = "granite3.2"
+
+[[providers]]
+name = "Ollama"
+base_url = "http://127.0.0.1:1143/v1"
+api_key = "xxx"
+provider_type = "Ollama"
+api_type = "OpenAI"
+
+[[providers.models]]
+name = "granite3.2"
+model = "granite3.2"
+
+[[providers.models]]
+name = "qwen2.5"
+model = "qwen2.5"
+
+[[providers.models]]
+name = "gemma3"
+model = "gemma3"
+
+[providers.default_model]
+name = "granite3.2"
+model = "granite3.2"

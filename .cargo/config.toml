@@ -1,0 +1,11 @@
+[env]
+WORKSPACE_ROOT_DIR = { value = "", relative = true }
+CRATES_ROOT_DIR = { value = "crates/", relative = true }
+OUT_DIR = { value = "out/", relative = true }
+PLAYGROUND_DIR = { value = "out/playground/", relative = true }
+CONFIG_ROOT_DIR = { value = "config/", relative = true }
+COMMIT_API_KEY = "zzzzzz"
+COMMIT_BASEURL_ = "https://ollama.lipinski.app/v1"
+COMMIT_BASEURL = "http://localhost:1234/v1"
+COMMIT_MODEL="llama-3.2-1b-instruct"
+# COMMIT_MODEL="gemma3:12b"

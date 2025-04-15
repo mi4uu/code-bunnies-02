@@ -1,0 +1,77 @@
+[env]
+RUST_BACKTRACE = "1"
+CARGO_MAKE_EXTEND_WORKSPACE_MAKEFILE = true
+
+[tasks.format]
+install_crate = "rustfmt"
+command = "cargo"
+args = ["fmt", "--", "--emit=files"]
+
+
+[tasks.lint]
+workspace = false
+install_crate = "cargo-clippy"
+command = "cargo"
+args = ["clippy", "--workspace", "--all-targets"]
+
+
+[tasks.fix]
+workspace = false
+install_crate = "cargo-clippy"
+command = "cargo"
+args = ["clippy", "--fix", "--workspace", "--all-targets"]
+
+
+[tasks.clean]
+command = "cargo"
+args = ["clean"]
+
+[tasks.build]
+command = "cargo"
+args = ["build"]
+dependencies = ["format"]
+
+[tasks.test]
+command = "cargo"
+args = ["test", "--color=never"]
+dependencies = ["build"]
+
+[tasks.new-crate]
+workspace = false
+env = { "CARGO_MAKE_WORKSPACE_SKIP_MEMBERS" = "*" }
+cwd = "./crates/"
+command = "cargo"
+args = [
+    "generate",
+    "-p",
+    "../.cargo/templates/code-bunnies-crate",
+    "--name",
+    "${@}",
+]
+[tasks.git-ui]
+workspace = false
+install_crate = "serie"
+command = "serie"
+[tasks.git-list]
+workspace = false
+script = "lumen list"
+
+[tasks.git-diff]
+workspace = false
+script = "lumen explain --diff"
+
+
+[tasks.before-commit]
+workspace = false
+script = "git add ."
+
+
+[tasks.init]
+workspace = false
+script = "cargo run --package tools --bin init -- setup"
+dependencies = ["before-commit"]
+
+[tasks.commit]
+workspace = false
+script = "cargo run --package tools --bin commit && git push"
+dependencies = ["before-commit"]

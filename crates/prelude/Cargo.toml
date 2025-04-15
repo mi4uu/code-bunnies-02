@@ -1,0 +1,20 @@
+[package]
+name = "prelude"
+description = "for  Code Bunnies"
+version = "0.1.0"
+license.workspace = true
+edition.workspace = true
+authors.workspace = true
+homepage.workspace = true
+repository.workspace = true
+rust-version.workspace = true
+
+[dependencies]
+bon.workspace = true
+config.workspace = true
+dirs.workspace = true
+regex.workspace = true
+serde.workspace = true
+
+[lints]
+workspace = true

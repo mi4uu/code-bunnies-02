@@ -1,0 +1,18 @@
+[template]
+cargo_generate_version = ">=0.23.3"
+# subfolder = "crates"
+
+
+# [placeholders]
+# crate_type = { type = "string", prompt = "what type of project it is ?", choices = [
+#     "lib",
+#     "bin",
+#     "both",
+# ], default = "lib" }
+# project_name = { prompt = "Enter project name", default = "my_project", type = "string" }
+
+
+[conditional.'crate_type == "lib"']
+ignore = ["src/main.rs"]
+[conditional.'crate_type == "bin"']
+ignore = ["src/lib.rs"]
