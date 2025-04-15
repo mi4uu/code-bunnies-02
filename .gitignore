@@ -3,3 +3,4 @@ out/models/
 *.log
 kwaak.toml
 kwaak.toml
+docs/libs/
