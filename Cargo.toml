@@ -34,7 +34,7 @@ authors = ["Michał Lipiński"]
 homepage = "https://github.com/mi4uu/code-bunnies"
 repository = "https://github.com/mi4uu/code-bunnies"
 description = "Code Bunnies - A collection of code generation tools for Rust"
-license = "do-not-use"
+license = "AGPL-3.0-or-later"
 
 [workspace.lints]
 clippy = {}
